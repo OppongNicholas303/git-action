@@ -1,6 +1,5 @@
 name: first-time
-# on: workflow_dispatch
-on: push:
+on: push
 jobs:
   hello:
     runs-on: ubuntu-latest
