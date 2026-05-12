@@ -4,7 +4,20 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello step
+      - name: Build  Step
         run: |
           echo "This is my first time"
           echo "I will continue learning"
+          
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Phase
+        run: echo "Running Test"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: deploy the App
+      run: echo "Deploying test"
+  
