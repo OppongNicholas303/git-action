@@ -26,5 +26,5 @@ jobs:
     needs: test
     steps:
     - name: deploy the App
-      run: echo "Deploying test by, ${{ vars.MY_NAME }}"
+      run: echo "Deploying test by, ${{ secrets.MY_NAME }}"
   
