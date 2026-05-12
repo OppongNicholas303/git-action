@@ -1,0 +1,8 @@
+name: first-time
+on: workflow_dispatch
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello step
+        run: echo "This is my first time"
