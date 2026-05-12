@@ -4,6 +4,7 @@ on:
     branches: 
       - main 
       - master
+      - "feature/**"
 jobs:
   hello:
     runs-on: ubuntu-latest
@@ -25,5 +26,5 @@ jobs:
     needs: test
     steps:
     - name: deploy the App
-      run: echo "Deploying test"
+      run: echo "Deploying test by &{{vars.MY_NAME}}"
   
