@@ -9,22 +9,22 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Build  Step
-        run: |
-          echo "This is my first time"
-          echo "I will continue learning"
+      - name: Using actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Print index.html
+        run: cat index.html
           
-  test:
-    runs-on: ubuntu-latest
-    needs: hello
-    steps:
-      - name: Test Phase
-        run: echo "Running Test"
+  # test:
+  #   runs-on: ubuntu-latest
+  #   needs: hello
+  #   steps:
+  #     - name: Test Phase
+  #       run: echo "Running Test"
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-    - name: deploy the App
-      run: echo "Deploying test by, ${{ secrets.MY_NAME }}"
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: test
+  #   steps:
+  #   - name: deploy the App
+  #     run: echo "Deploying test by, ${{ secrets.MY_NAME }}"
   
